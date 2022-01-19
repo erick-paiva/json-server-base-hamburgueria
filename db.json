@@ -9,44 +9,46 @@
   ],
   "products": [
     {
-      "img_Url": "./Assets/images/hamburguer.svg",
-      "price": 14.0,
-      "description": "aaa"
+      "img_Url": "https://lh3.google.com/u/0/d/1leVPmb_nvuIP386y2-MYmw1LvTkZ9ff9=w200-h190-p-k-nu-iv1",
+      "name":"Big Kenzie",
+      "price": 18,
+      "category": "Sanduíches"
     },
     {
-      "img_Url": "./Assets/images/coca-cola.svg",
+      "img_Url": "https://lh3.google.com/u/0/d/1gqSecXqRokfzLe6hqq6t81g7W8vLuJ-z=w200-h190-p-k-nu-iv1",
+      "name":"Coca Cola",
+      "price": 7,
+      "category": "Bebidas"
+    },{
+      "img_Url": "https://lh3.google.com/u/0/d/1DdhpHCnN32UvYcKmMRleFS6wsUwe90DQ=w200-h190-p-k-nu-iv1",
+      "name":"Combo Kenzie",
+      "price": 26,
+      "category": "Combos"
+    },{
+      "img_Url": "https://lh3.google.com/u/0/d/1LwX4mzZV3LUk6vng63GQAQ2wrDoZYGzU=w200-h190-p-k-nu-iv1",
+      "name":"Fanta Guarana",
+      "price": 5,
+      "category": "Bebidas"
+    },{
+      "img_Url": "https://lh3.google.com/u/0/d/12RGW8grkIYHX9aZofMvJXI1XqaKzruEq=w200-h190-p-k-nu-iv1",
+      "name":"Hamburguer",
       "price": 14.0,
-      "description": "aaa"
-    },
-    {
-      "img_Url": "./Assets/images/big-kenzie.svg",
-      "price": 14.0,
-      "description": "aaa"
-    },
-    {
-      "img_Url": "./Assets/images/combo-kenzie.svg",
-      "price": 14.0,
-      "description": "aaa"
-    },
-    {
-      "img_Url": "./Assets/images/fanta-guarana.svg",
-      "price": 14.0,
-      "description": "aaa"
-    },
-    {
-      "img_Url": "./Assets/images/mc-shake.svg",
-      "price": 14.0,
-      "description": "aaa"
-    },
-    {
-      "img_Url": "./Assets/images/mc-shake-ovo.svg",
-      "price": 14.0,
-      "description": "aaa"
-    },
-    {
-      "img_Url": "./Assets/images/x-burguer.svg",
-      "price": 14.0,
-      "description": "aaa"
+      "category": "Sanduíches"
+    },{
+      "img_Url": "https://lh3.google.com/u/0/d/1Iqhz4whPB4OMnqv7Tr91GjjaSrp4x0IJ=w200-h190-p-k-nu-iv1",
+      "name":"McShake Ovomaltine",
+      "price": 15,
+      "category": "Sobremesas"
+    },{
+      "img_Url": "https://lh3.google.com/u/0/d/1LY8TrJS_84uWGPnt9PhD1fb72Pru3YR7=w200-h190-p-k-nu-iv1",
+      "name":"McShake",
+      "price": 10,
+      "category": "Sobremesas"
+    },{
+      "img_Url": "https://lh3.google.com/u/0/d/1mEYTFDC44L7gnCnnMM9SUA2eWKO06npP=w200-h190-p-k-nu-iv1",
+      "name":"X-Burguer",
+      "price": 16,
+      "category": "Sanduíches"
     }
   ],
   "cart": [{}]
