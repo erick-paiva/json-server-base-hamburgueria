@@ -1,13 +1,13 @@
 <h1 align="center">
-  <img alt="KenzieHub" title="KenzieHub" src="https://kenzie.com.br/images/logoblue.svg" width="100px" />
+  <img alt="Burguer Kenzie" title="Burguer Kenzie" src="https://i.ibb.co/djbw6LV/x-burgue.png" width="100px" />
 </h1>
 
 <h1 align="center">
-  Entrega Kenzie Hub JSON Server
+  Entrega Hamburgueria Kenzie
 </h1>
 
 ## **Endpoints**
-A api tem um total de 7 endPoints, sendo voltada aos usuarios que desejam cadastrar as linguagens de programaçao que dominam atualmente e poder compartilhar quais cursos estao fazendo no momento com os outros usuarios.
+A api tem um total de 7 endPoints, onde o usuario pode comprar diversas guloseimas entre elas hamburguers e bebidas em geral.
 
 O JSON para utilizar no Insomnia é este aqui -> 
 
@@ -20,7 +20,6 @@ O JSON para utilizar no Insomnia é este aqui ->
 	"email": "johndoe@email.com",
 	"password":"123456",
 	"name": "John Doe",
-	"age": 18
 }
 
 ```
@@ -32,7 +31,6 @@ Caso dê tudo certo, a resposta será assim:
   "user": {
     "email": "johndoe@email.com",
     "name": "John Doe",
-    "age": 18,
     "id": 1
   }
 }
@@ -77,7 +75,6 @@ Caso dê tudo certo, a resposta será assim:
   "user": {
     "email": "johndoe@email.com",
     "name": "John Doe",
-    "age": 18,
     "id": 1
   }
 }
