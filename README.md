@@ -2,7 +2,7 @@
   <img alt="Burguer Kenzie" title="Burguer Kenzie" src="https://i.ibb.co/djbw6LV/x-burgue.png" width="100px" />
 </h1>
 
-<h1 align="center">
+<h1 align="center" color="#27AE60">
   Entrega Hamburgueria Kenzie
 </h1>
 
@@ -92,73 +92,115 @@ Após o usuário estar logado, ele deve conseguir informar as tecnologias que el
 
 <h2 align ='center'> Informa qual curso esta fazendo no momento </h2>
 
-`POST /courses - FORMATO DA REQUISIÇÃO`
+`POST /cart - FORMATO DA REQUISIÇÃO`
 ```json
 [
-  {
-    "nameOfCourse": "Kenzie Academy",
-    "duration": "12 months",
-    "userId": 2
-  }
+ {
+      "name": "Fanta",
+      "category": "Bebidas",
+      "price": 4.99,
+      "img": "https://i.ibb.co/QNb3DJJ/milkshake-ovomaltine.png",
+			"amount": 1,
+			"userId": 2
+}
 ]
 ```
-Você devera informar os respectivos itens ao seu curso
-    1. O nome do curso
-    2. a duraçao do curso
-    3. o id do usuario
+Você devera informar os respectivos itens ao seu carrinho
+    1. O nome do produto
+    2. a categoria do produto
+    3. o preço do produto
+    4. a imagem
+    5. a quantidade
+    6. o id do usuario
 
 Caso dê tudo certo, a resposta será assim:
 
 ```json
 {
-  "nameOfCourse": "Kenzie Academy",
-  "duration": "12 months",
+  "name": "Fanta",
+  "category": "Bebidas",
+  "price": 4.99,
+  "img": "https://i.ibb.co/QNb3DJJ/milkshake-ovomaltine.png",
+  "amount": 1,
   "userId": 2,
-  "id": 1
+  "id": 4
 }
 ```
-<h2 align ='center'> Informar quais Liguagens de programação você domina atualmente </h2>
+<h2 align ='center'> Aumentar a quantidade de produtos </h2>
 
-`POST /programmingLanguages - FORMATO DA REQUISIÇÃO`
+`PATCH /cart - FORMATO DA REQUISIÇÃO`
 ```json
 {
-	"languageName": "python",
-	"nivel": "junior"
+	"amount": 3
 }
 ```
 
 Você devera informar os respectivos itens a liguagem de Programação
-    1. O nome da linguagem
-    2. O seu nivel de senioridade nessa liguagem
+    1. a quantidade do respectivo produto
 
 Caso dê tudo certo, a resposta será assim:
 
 ```json
 {
-  "languageName": "python",
-  "nivel": "junior",
-  "id": 4
+  "amount": 3,
+  "price": 14,
+  "category": "Sanduíches",
+  "img": "https://i.ibb.co/fpVHnZL/hamburguer.png",
+  "name": "Hamburguer",
+  "userId": 2,
+  "id": 1
 }
 ```
 
-Obtendo as liguagens de programação que você cadastrou
+Obtendo o carrinho da api
 
-`GET /programmingLanguages - FORMATO DA REQUISIÇÃO`
+`GET /cart/?userid="youUserId" - FORMATO DA REQUISIÇÃO`
 
 Caso dê tudo certo, a resposta será assim:
 
 ```json[
 {
-    "languageName": "python",
-    "nivel": "junior",
+    "amount": 3,
+    "price": 14,
+    "category": "Sanduíches",
+    "img": "https://i.ibb.co/fpVHnZL/hamburguer.png",
+    "name": "Hamburguer",
+    "userId": 2,
     "id": 1
-}
+  },
+  {
+    "amount": 5,
+    "price": 18,
+    "category": "Sanduíches",
+    "img": "https://i.ibb.co/FYBKCwn/big-kenzie.png",
+    "name": "Big Kenzie",
+    "userId": 2,
+    "id": 2
+  },
+  {
+    "amount": 4,
+    "price": 16,
+    "category": "Sanduíches",
+    "img": "https://i.ibb.co/djbw6LV/x-burgue.png",
+    "name": "X-Burguer",
+    "userId": 2,
+    "id": 3
+  },
+  {
+    "name": "Fanta",
+    "category": "Bebidas",
+    "price": 4.99,
+    "img": "https://i.ibb.co/QNb3DJJ/milkshake-ovomaltine.png",
+    "amount": 1,
+    "userId": 2,
+    "id": 4
+  }
 ]
 ```
 
-Também é possível deletar uma linguagem da sua lista
+Também é possível remover um produto do seu carrinho
 
-`DELETE /programmingLanguages/:language_id - FORMATO DA REQUISIÇÃO`
+`DELETE /cart/:product_id - FORMATO DA REQUISIÇÃO`
 
 ```
 Não é necessário um corpo da requisição.
@@ -166,22 +208,64 @@ Não é necessário um corpo da requisição.
 
 ## Rotas que não necessitam de autorização
 
-<h2 align ='center'> Obtendo os cursos de outras pessoas </h2>
+<h2 align ='center'> Obtendo todos os produtos da api </h2>
 
-Nessa aplicação o usuário sem fazer login ou se cadastrar pode ver os devs já cadastrados na plataforma, na API podemos acessar a lista dessa forma:
+Nessa aplicação o usuário precisa esta apenas logado para ver os produtos já cadastrados na plataforma, na API podemos acessar os produtos dessa forma:
 
-`GET /courses -  FORMATO DA RESPOSTA - STATUS 200`
+`GET /products -  FORMATO DA RESPOSTA - STATUS 200`
 
 ```json
 [
   {
-    "nameOfCourse": "Kenzie Academy",
-    "duration": "12 months",
-    "userId": 2,
-    "id": 1
+    "id": 1,
+    "name": "Hamburguer",
+    "category": "Sanduíches",
+    "price": 14,
+    "img": "https://i.ibb.co/fpVHnZL/hamburguer.png",
+    "amount": 1
+  },
+  {
+    "id": 2,
+    "name": "X-Burguer",
+    "category": "Sanduíches",
+    "price": 16,
+    "img": "https://i.ibb.co/djbw6LV/x-burgue.png",
+    "amount": 1
+  },
+  {
+    "id": 3,
+    "name": "Big Kenzie",
+    "category": "Sanduíches",
+    "price": 18,
+    "img": "https://i.ibb.co/FYBKCwn/big-kenzie.png",
+    "amount": 1
+  },
+  {
+    "id": 4,
+    "name": "Fanta Guaraná",
+    "category": "Bebidas",
+    "price": 5,
+    "img": "https://i.ibb.co/cCjqmPM/fanta-guarana.png",
+    "amount": 1
+  },
+  {
+    "id": 5,
+    "name": "Coca",
+    "category": "Bebidas",
+    "price": 4.99,
+    "img": "https://i.ibb.co/fxCGP7k/coca-cola.png",
+    "amount": 1
+  },
+  {
+    "id": 6,
+    "name": "Fanta",
+    "category": "Bebidas",
+    "price": 4.99,
+    "img": "https://i.ibb.co/QNb3DJJ/milkshake-ovomaltine.png",
+    "amount": 1
   }
 ]
 ```
 
 
-by Erick Paiva :chrome_dynosaur:
+by Erick Paiva 👨‍💻
