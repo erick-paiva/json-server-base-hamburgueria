@@ -90,7 +90,7 @@ Rotas que necessitam de autorização deve ser informado no cabeçalho da requis
 
 Após o usuário estar logado, ele deve conseguir informar as tecnologias que ele aprendeu até agora.
 
-<h2 align ='center'> Informa qual curso esta fazendo no momento </h2>
+<h2 align ='center'> Adcionar um produto no carrinho </h2>
 
 `POST /cart - FORMATO DA REQUISIÇÃO`
 ```json
@@ -135,7 +135,7 @@ Caso dê tudo certo, a resposta será assim:
 }
 ```
 
-Você devera informar os respectivos itens a liguagem de Programação
+Você devera informar os respectivos itens no seu produto
     1. a quantidade do respectivo produto
 
 Caso dê tudo certo, a resposta será assim:
