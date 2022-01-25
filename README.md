@@ -88,7 +88,7 @@ Rotas que necessitam de autorização deve ser informado no cabeçalho da requis
 
 > Authorization: Bearer {token}
 
-Após o usuário estar logado, ele deve conseguir informar as tecnologias que ele aprendeu até agora.
+Após o usuário estar logado, ele deve conseguir adcionar produtos ao carrinho.
 
 <h2 align ='center'> Adcionar um produto no carrinho </h2>
 
